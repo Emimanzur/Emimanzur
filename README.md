@@ -60,3 +60,31 @@ jobs:
     - name: Notify team about activity tracking
       run: ./notify_team.sh "Activities have been tracked and updated"
 
+  track-cristino:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Track Cristino calls
+      run: ./track_calls.sh --agent Cristino
+
+    - name: Track Cristino property uploads
+      run: ./track_property_uploads.sh --agent Cristino
+
+    - name: Track Cristino client visits
+      run: ./track_client_visits.sh --agent Cristino
+
+    - name: Track Cristino prelistings
+      run: ./track_prelistings.sh --agent Cristino
+
+    - name: Track Cristino sign placements
+      run: ./track_sign_placements.sh --agent Cristino
+
+    - name: Track Cristino captures
+      run: ./track_captures.sh --agent Cristino
+
+    - name: Track Cristino sales
+      run: ./track_sales.sh --agent Cristino
+
+    - name: Notify team about Cristino activity tracking
+      run: ./notify_team.sh "Cristino's activities have been tracked and updated"
+
